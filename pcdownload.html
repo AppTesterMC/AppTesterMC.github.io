@@ -1,0 +1,208 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+   <title>Windows Installation Instructions</title>
+</head>
+<body bgcolor="#FFFFCC" link="#CC0000" vlink="#FF3300" alink="#330099">
+
+<a href="http://www-stat.stanford.edu/~wavelab/Wavelab_850/download.html"><font color="#FF0000" size="4">Link
+to the Download Page</font></a>
+<hr color="#FF0000">
+<p>
+
+<center><b>Windows Installation</b></center><br>
+&nbsp;To follow these instructions you will need:</p>
+<ol>
+  <dl>
+    <dt>(1) An Intel platform box running Win 2000 or XP.
+    <dt>(2) A program such as WinZip which can un-zip a .zip file.&nbsp; <a href="http://www.winzip.com/"><font color="#0000ff">Download
+      WinZip</font></a><br>
+      (3) Matlab 6.X or 7 for Windows.
+    <dt>(4) In certain special circumstances, you may need to have the C
+      compiler to compile Mex files.</dt>
+  </dl>
+</ol>
+<p>Steps:</p>
+<ol>
+  <li>Download (in binary mode) the file&nbsp;<font color="#ff0000"><br>
+    </font><font face="Courier">&nbsp;&nbsp;&nbsp;<font color="#0000ff">Wavelab850.zip</font></font><font color="#ff0000"><br>
+    </font>&nbsp;to your PC by using the appropriate link from the WaveLab home
+    page.
+  <li>Extract the .zip file into the folder<br>
+    <font face="Courier">&nbsp;<font color="#0000ff">&nbsp;&nbsp;\matlab\toolbox\</font>&nbsp;<br>
+    </font>Remark: If your Matlab root directory is named differently than&nbsp;<br>
+    <font face="Courier">&nbsp;&nbsp;&nbsp;<font color="#0000ff">\matlab</font></font><br>
+    then use its correct name (for example <font face="Courier"><font color="#0000ff">\MATLABR12</font>)</font>
+    instead of the <font face="Courier" color="#0000ff">\matlab</font>
+    convention we use every time the Matlab root directory is referred.
+    <p style="margin-top: -2; margin-bottom: -2">After you unzip you should have
+    the following subdirectory structure:<br>
+    <br>
+    </p>
+    <p style="line-height: 100%; text-indent: -1; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850</font>
+    <p class="MsoNormal" style="line-height: 100%; text-indent: -1; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Biorthogonal</font></p>
+    <p class="MsoNormal" style="line-height: 100%; text-indent: -1; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Books</font></p>
+    <p class="MsoNormal" style="line-height: 100%; text-indent: -1; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Books\WaveTour</font></p>
+    <p class="MsoNormal" style="line-height: 100%; text-indent: -1; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Browsers</font></p>
+    <p class="MsoNormal" style="line-height: 100%; text-indent: -1; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Browsers\One-D</font></p>
+    <p class="MsoNormal" style="line-height: 100%; text-indent: -1; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Browsers\Two-D</font></p>
+    <p class="MsoNormal" style="line-height: 100%; text-indent: -1; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Continuous</font></p>
+    <p class="MsoNormal" style="line-height: 100%; text-indent: -1; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Datasets</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\DeNoising</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Documentation</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\FastAlgorithms</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Fractals</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Interpolating</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Invariant</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Median</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Median\HigherDegree</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Mexsource</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Meyer</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Orthogonal</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Packets</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Packets\One-D</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Packets\Two-D</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Papers</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Papers\Adapt</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Papers\Asymp</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Papers\Blocky</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Papers\Correl</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Papers\Ideal</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Papers\MinEntSeg</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Papers\MIPT</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Papers\RiskAnalysis</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Papers\ShortCourse</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Papers\SpinCycle</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Papers\Tour</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Papers\VillardDelans</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Pursuit</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\TimeFrequency</font></p>
+    <p class="MsoNormal" style="line-height: 100%; margin-top: -2; margin-bottom: -2"><font face="Courier">Wavelab850\Utilities</font></p>
+    <p style="line-height: 100%; margin-top: -2; margin-bottom: -2"><span style="font-size: 12.0pt; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Courier">Wavelab850\Workouts</font></span>
+    <p style="line-height: 100%; margin-top: -2; margin-bottom: -2"><span style="font-size: 12.0pt; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Courier">Wavelab850\Workouts\BestOrthoBasis</font></span>
+    <p style="line-height: 100%; margin-top: -2; margin-bottom: -2"><span style="font-size: 12.0pt; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Courier">Wavelab850\Workouts\MatchingPursuit</font></span>
+    <p style="line-height: 100%; margin-top: -2; margin-bottom: -2"><span style="font-size: 12.0pt; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Courier">Wavelab850\Workouts\MultiFractal</font></span>
+    <p style="line-height: 100%; margin-top: -2; margin-bottom: -2"><span style="font-size: 12.0pt; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Courier">Wavelab850\Workouts\Toons</font></span>
+    <p style="margin-top: -2; margin-bottom: -2">In Matlab, set the current path to<br>
+    <font face="Courier">&nbsp;&nbsp;&nbsp;<font color="#0000ff">matlab\toolbox\WaveLab850</font></font><br>
+    Alternatively, copy the file WavePath.m from<br>
+    <font face="Courier">&nbsp;&nbsp;&nbsp;<font color="#0000ff">matlab\toolbox\WaveLab850</font></font><br>
+    to<br>
+    <font face="Courier">&nbsp;&nbsp; <font color="#0000ff">matlab\toolbox\local</font></font>
+    </p>
+  <li>Run&nbsp;<font face="Courier"> <font color="#0000ff">WavePath&nbsp;</font></font><br>
+    at the command prompt to start WaveLab 850.&nbsp; Matlab should return a
+    &quot;Welcome to WaveLab&quot; message as shown in the section <b>Success</b>
+    below.
+  <li>Type InstallMEX to run and Install the .mex files. [You may need C
+    compiler for this part, but if you don't have any C compiler you can <a href="http://www-stat.stanford.edu/~wavelab/Wavelab_850/mex850.html">download
+    the mex files from us</a>; and put each .dll file in the folder which has .m
+    file with the same name. For example FWT_PO.dll should be copied in the
+    directory which has FWT_PO.m.If you couldn't make the MEX files work, don't
+    worry! Most of the parts of wavelab&nbsp; still work but more slowly!]&nbsp;
+</ol>
+<p>Note:</p>
+<blockquote>
+  <ol>
+    <li>If you want Matlab to automatically load WaveLab upon start-up, copy the
+      file&nbsp;<font face="Courier" color="#0000ff"><br>
+      &nbsp;&nbsp;&nbsp; WavePath.m</font>&nbsp;<br>
+      from the folder&nbsp;<font face="Courier" color="#0000ff"><br>
+      &nbsp;&nbsp;&nbsp; WaveLab850</font>&nbsp;<br>
+      to the folder&nbsp;<font face="Courier" color="#0000ff"><br>
+      &nbsp;&nbsp;&nbsp; matlab\toolbox\local</font><br>
+      If you already have a <font face="Courier" color="#0000ff">startup.m</font>
+      file in the directory <font face="Courier" color="#0000ff">matlab\toolbox\local</font><font color="#ff0000">,</font>
+      add to it the line&nbsp;<font face="Courier" color="#0000ff"><br>
+      &nbsp;&nbsp;&nbsp; WavePath;</font>&nbsp;<br>
+      otherwise, rename <font face="Courier" color="#0000ff">WavePath.m </font>as
+      <font face="Courier" color="#0000ff">startup.m</font>.
+    <li>Upon successful installation, remove the zip file to save space.</li>
+  </ol>
+</blockquote>
+<ol>
+<FONT SIZE="+1"> 
+<hr ALIGN=LEFT></ol>
+
+<center><b>Trouble-Shooting Windows</b></center>
+
+<p>It may be that your version of matlab has different folders structure than what is assumed here 
+and the folder <font color="#FF0000">matlab\toolbox\local</font> doesn't exist. In this case
+look for the folder of matlab that contains the startup and path definition files and use it instead. 
+In older versions of matlab it used to be the <font color="#FF0000">matlab\bin</font> folder.
+<BR>
+<BR>
+<P>If you prefer to place WaveLab in a different folder of Matlab than the one we suggest, it's ok to do so.  
+
+  
+<p>To check that you have every file that you should, look at Documentation\WavelabFiles.txt
+to see if everything is there! While in Matlab, check that the <font color="#FF0000">path</font>
+command returns a list that looks like the one under item 2 above.
+<br>&nbsp;
+<br>&nbsp;
+<p>
+<hr ALIGN=LEFT>
+<center>
+<p><b>Success</b></center>
+
+<p>When you have a successful installation, you should see something like
+the following when you invoke Matlab:</P>
+
+ <P><FONT COLOR="#0000ff">To get started, type one of these: helpwin, helpdesk, or demo.<BR>
+  For product information, type tour or visit www.mathworks.com.<BR>
+
+ <BR>
+
+Welcome to WaveLab v 850<BR>
+Setting Global Variables<BR>
+Pathnames Successfully Set<BR>
+global WAVELABPATH = &quot;C:\MATLABR12\toolbox\WaveLab850\&quot;<BR>
+global PATHNAMESEPARATOR = &quot;\&quot;; global MATLABVERSION = 6.5<BR>
+global PREFERIMAGEGRAPHICS = 1<BR>
+WaveLab v 850 Setup Complete</FONT></P>
+
+<P><FONT COLOR="#0000ff">Available Demos - Figures from the following papers:<BR>
+  AdaptDemo  - ``Adapting to Unknown Smoothness via Wavelet Shrinkage''<BR>
+  AsympDemo  - ``Wavelet Shrinkage: Asymptopia?''<BR>
+  BlockyDemo - ``Smooth Wavelet Decompositions with Blocky Coefficient Kernels''<BR>
+  CorrelDemo - ``Wavelet Threshold Estimators for Data with Correlated Noise''<BR>
+  IdealDemo  - ``Ideal Spatial Adaptation via Wavelet Shrinkage''<BR>
+  MESDemo    - ``Minimum Entropy Segmentation''<BR>
+  MIPTDemo  - ``Nonlinear Wavelet Transforms based on Median-Interpolaton''<BR>
+  RiskDemo  - ``Exact Risk Analysis of Wavelet Regression''<BR>
+  SCDemo     - ``Nonlinear Wavelet Methods for Recovery of Signals, Densities<BR>
+                  and Spectra from Indirect and Noisy Data''<BR>
+CSpinDemo   - ``Translation-Invariant De-Noising''<BR>
+  TourDemo   - ``Wavelet Shrinkage and W.V.D. -- A Ten-Minute Tour''<BR>
+  VdLDemo    - ``WaveLab and Reproducible Research''<BR>
+
+<P><FONT COLOR="#0000ff">Available Workouts:<BR>
+  BBWorkout  - Workouts for Best Basis<BR>
+  MPWorkout  - Workouts for Matching Pursuit<BR>
+  MultiFrac  - Workouts for Continuous Wavelet Transform<BR>
+  Toons      - The Cartoon Guide to Wavelets<BR>
+
+<P><FONT COLOR="#0000ff">Available Book(s):<BR>
+  WaveTour   - ``WaveLet Tour of Signal Processing''<BR> 
+
+
+</font>
+
+<P>&nbsp;
+<hr color="#FF0000">
+
+<P style="margin-top: -1"><a href="http://www-stat.stanford.edu/~wavelab/Wavelab_850/download.html"><font color="#FF0000" size="4">Link
+to the Download Page</font></a>
+
+<P><FONT COLOR="#000000">
+<BR>
+</FONT>
+
+</BODY>
+</HTML>
+
+
+
+
