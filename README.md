@@ -5,3 +5,10 @@ This is a fork from the Stanford WaveLab library website (https://statweb.stanfo
 
 # Wavelab850 link:
 https://apptestermc.github.io/Wavelab_850/
+
+# Gabonator DOS javascript Games
+
+* https://apptestermc.github.io/WebGoose/
+* https://apptestermc.github.io/WebFox/
+* https://apptestermc.github.io/WebRick2/
+* https://apptestermc.github.io/WebXenon2/
