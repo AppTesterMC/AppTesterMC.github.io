@@ -1,0 +1,139 @@
+<canvas id="canvas" width="640" height="350" style="border: 1px solid #d0d0d0; transform:translate(320px, 175px) scale(2);"></canvas>
+<script src="fs.cdman.wasm.js"></script>
+<script src="fs.cdman.data.js"></script>
+<script src="fs.title.cdm.js"></script>
+<script src="fs.graphic1.cdm.js"></script>
+<script src="fs.screen1.cdm.js"></script>
+<script src="fs.graphic2.cdm.js"></script>
+<script src="fs.screen2.cdm.js"></script>
+<script src="fs.graphic3.cdm.js"></script>
+<script src="fs.screen3.cdm.js"></script>
+<script>
+class MiniApp
+{
+  init() 
+  { 
+    var canvas = document.getElementById('canvas');
+    this.ctx = canvas.getContext('2d');
+    this.imageData = this.ctx.getImageData(0, 0, canvas.width, canvas.height);
+    this.lastKey = 0;
+
+    document.onkeydown = (function(evt) {
+        evt = evt || window.event;
+        switch (evt.keyCode)
+        {
+          case 38: this.lastKey = 0x4800; break;
+          case 40: this.lastKey = 0x5000; break;
+          case 37: this.lastKey = 0x4b00; break;
+          case 39: this.lastKey = 0x4d00; break;
+          case 13: this.lastKey = 0x1c0d; break;
+        }
+    }).bind(this);
+  }
+
+  getKey() 
+  {
+    var aux = this.lastKey;
+    this.lastKey = 0;
+    return aux;
+  }
+
+  transfer(buffer, ptr)
+  {
+    const data = new Uint8ClampedArray(buffer.buffer, ptr, 640 * 350 * 4);
+    const img = new ImageData(data, 640, 350);
+    this.ctx.putImageData(img, 0, 0);
+  } 
+
+}
+
+window.miniApp = new MiniApp()
+
+Module['noRun'] = true;	
+
+var curFile;
+var memoryPtr;
+var memory;
+var memoryKeyb;
+var memoryVideo;
+
+window.onload = () => {
+  Module['imports'] = {
+    _Z10_fileclosev: () => { 
+      curFile = null;
+    },
+    _Z9_fileopenPc: (name) => { 
+      var name = Module['imports'].getString(name);
+      curFile = Module[name];
+      return !!curFile;
+    },
+    _Z9_filereadiiii: (ofs, size, mseg, mofs) => { 
+      var p = memoryPtr + mseg*16 + mofs;
+      for (var i=0; i<size; i++)
+        memory[p++] = curFile[ofs+i];
+    },
+    _Z9_filesizev: () => { 
+      if (!curFile)
+        throw "no file opened";
+      return curFile.length;
+    },
+    _Z5_tonei: (freq) => {},
+
+    debugPrint: (i) => { console.log(Module['imports'].getString(i)); },
+    assertionHandler: (i) => { console.log(Module['imports'].getString(i)); throw "error"; },
+    getString: (ptr) => {
+      var text = "";
+      for (var i=0; i<100 && Module['memory'][ptr+i] != 0; i++)
+        text += String.fromCharCode(Module['memory'][ptr+i]);
+      return text;
+    }
+  };
+
+  Module['exports'] = {
+    appFinish: null,
+    appInit: null,
+    appLoop: null,
+    appMemory: null,
+    appVideoBuffer: null,
+    appKeyboardBuffer: null
+  };
+
+  if (Module['run']) 
+    Module['run']()
+};
+
+Module['onRuntimeInitialized'] = () =>
+{
+  Module.appInit();
+
+  memory = Module['memory']
+  memoryPtr = Module.appMemory();
+  memoryKeyb = Module.appKeyboardBuffer();
+  memoryVideo = Module.appVideoBuffer();
+
+  var data = Module['cdman.data'];
+  for (var i=0; i<data.length; i++)
+    memory[memoryPtr+i] = data[i];
+
+  window.miniApp.init();
+  
+  window.appInterval = setInterval(() =>
+  {
+    var key = window.miniApp.getKey();
+    memory[memoryKeyb+1] = key >> 8;
+    memory[memoryKeyb] = key & 0xff;
+
+    window.miniApp.lastKey = 0;
+    try {
+      Module.appLoop();
+    } catch (e) {
+      clearInterval(window.appInterval);
+      console.log("application stopped");
+    }
+    window.miniApp.transfer(memory, memoryVideo)
+  }, 30);
+}
+</script>
+<script src="app.js"></script>
+<script src="extra.js"></script>
+
