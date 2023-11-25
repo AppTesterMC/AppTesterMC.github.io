@@ -15,3 +15,4 @@ You can find more here: [Cicoparser](https://github.com/gabonator/Education/blob
 * https://apptestermc.github.io/WebFox/
 * https://apptestermc.github.io/WebRick2/
 * https://apptestermc.github.io/WebXenon2/
+* https://apptestermc.github.io/WebAlleycat/
