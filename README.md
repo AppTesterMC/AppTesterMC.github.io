@@ -11,7 +11,7 @@ https://apptestermc.github.io/Wavelab_850/
 
 You can find more here: [Cicoparser](https://github.com/gabonator/Education/blob/c6f5cc670aa801e686919b1485171cf502b253fd/2021/CicoParser/readme.md)
 
-* https://apptestermc.github.io/WebGoose/
+* [https://apptestermc.github.io/WebGoose/]
 * https://apptestermc.github.io/WebFox/
 * https://apptestermc.github.io/WebRick2/
 * https://apptestermc.github.io/WebXenon2/
