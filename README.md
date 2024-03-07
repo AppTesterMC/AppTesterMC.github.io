@@ -22,7 +22,7 @@ You can find more here: [Cicoparser](https://github.com/gabonator/Education/blob
 # [BlazeByte](https://github.com/BlazeByte/) Playstation Portable Web Apps
 
 An app for your PlayStation Portable which allows you to create, edit and share documents. It also has some games and applications.
-- [https://apptestermc.github.io/pspwxp/](https://apptestermc.github.io/pspwxp/)
+- [https://apptestermc.github.io/pspwxp/](https://apptestermc.github.io/pspwxp/) by [tisaconundrum2](https://github.com/tisaconundrum2/pspwxp)
 
 An app for developers to create their own portals for the PlayStation Portable from. 
 - [https://apptestermc.github.io/gnextop](https://apptestermc.github.io/gnextop)
