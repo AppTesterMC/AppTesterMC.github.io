@@ -19,8 +19,10 @@ You can find more here: [Cicoparser](https://github.com/gabonator/Education/blob
 * [https://apptestermc.github.io/WebCdman/](https://apptestermc.github.io/WebCdman/)
 
 
-# Fork of [tisaconundrum2](https://github.com/tisaconundrum2/pspwxp) Playstation Portable Windows XP 
+# [BlazeByte](https://github.com/BlazeByte/) Playstation Portable Web Apps
 
-Windows XP on your Playstation Portable is a set of Webpages that look similar to Windows XP. It has some features, games and applications.
+An app for your PlayStation Portable which allows you to create, edit and share documents. It also has some games and applications.
+- [https://apptestermc.github.io/pspwxp/](https://apptestermc.github.io/pspwxp/)
 
-[https://apptestermc.github.io/pspwxp/](https://apptestermc.github.io/pspwxp/)
+An app for developers to create their own portals for the PlayStation Portable from. 
+- [https://apptestermc.github.io/gnextop](https://apptestermc.github.io/gnextop)
